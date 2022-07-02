@@ -19,6 +19,8 @@ build:
 requirements:
     host:
         - openblas # [not win]
+        - libgcc-ng 7.5.0 # [linux]
+        - libstdcxx-ng 7.5.0 # [linux]
     build:
         - toolchain 2.4.0 0     # [win]
         - wheel 0.36.2 pyhd3eb1b0_0
@@ -30,12 +32,16 @@ requirements:
         - {{ compiler('cxx') }}
         - openblas # [not win]
         - make # [not win]
+        - libgcc-ng 7.5.0 # [linux]
+        - libstdcxx-ng 7.5.0 # [linux]
 
     run:
         - python
         - numpy
         - freeglut # [win]
         - openblas # [not win]
+        - libgcc-ng 7.5.0 # [linux]
+        - libstdcxx-ng 7.5.0 # [linux]
 
 test:
   # imports:
